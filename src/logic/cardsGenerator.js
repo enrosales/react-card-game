@@ -37,7 +37,7 @@ export function cardsShuffled() {
 /**
  * Generate the deck of 52 cards with the corresponding value Eg: A > K > Q > J etc...
  */
-const generateCardsDeck = () => {
+export const generateCardsDeck = () => {
   //Giving the value to each card. Eg A: value: 12  K: value: 11 Q: value: 10 ...
   const cardNames = cardsSuits.map((card, index) => ({ card, value: index }));
   //Generate an ordered array of objects with the 52 possible cards of the game
@@ -71,4 +71,5 @@ export const shuffle = (cards) => {
 export default {
   cardsShuffled,
   shuffle,
+  generateCardsDeck,
 };
