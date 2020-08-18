@@ -1,0 +1,47 @@
+.board {
+    background: darkcyan;
+    overflow: hidden;
+}
+
+.card {
+    position: relative;
+    width: 80px;
+    height: 120px;
+    border: 1px solid black;
+    background-color: white;
+    font-weight: bold;
+    font-size: 25px;
+    border-radius: 5px;
+    box-shadow: 2px -2px 9px -1px black;
+    margin:15px;
+    padding:2px;
+}
+
+.diamonds, .hearts {
+    color: red;
+}
+
+.clubs, .spades  {
+    color: black;
+}
+
+.top {
+    top: 2px;
+    left: 2px;
+}
+
+.bigsuit {
+    font-size: 30px;
+}
+
+.bigsuit-center {
+    text-align: center;
+}
+
+.bigsuit-left {
+    text-align: left;
+}
+.bottom {
+    right: 2px;
+    text-align: right;
+}
