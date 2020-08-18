@@ -10,7 +10,7 @@ export default function Deck({ cards, className }) {
         return (
           <div
             className={`card ${card.type}`}
-            style={{ top: -index * top + "px", left: index * left + "px" }}
+            /*style={{ top: -index * top + "px", left: index * left + "px" }}*/
             key={card.card + card.value + card.type + card.symbol}
           >
             <div className="top rank">{card.card}</div>
