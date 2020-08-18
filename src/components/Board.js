@@ -34,8 +34,14 @@ export default function Board({ game, onPlay, onReset, onCollect }) {
         }}
       >
         <Buttons onPlay={onPlay} onReset={onReset} onCollect={onCollect} />
-        <Deck cards={cardsOnBoardToFightPlayerA} className="col-md-4" />
-        <Deck cards={cardsOnBoardToFightPlayerB} className="col-md-4" />
+        <Deck
+          cards={cardsOnBoardToFightPlayerA}
+          className="col-md-4 card-container"
+        />
+        <Deck
+          cards={cardsOnBoardToFightPlayerB}
+          className="col-md-4 card-container"
+        />
       </div>
       <div className="row" style={{ maxHeight: "300px" }}>
         <Deck cards={cardsB} className="col-md-10 p-4 card-container" />
