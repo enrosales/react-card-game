@@ -1,8 +1,8 @@
-import React, { Fragment } from "react";
+import React from "react";
 
 export default function Card({ card, index, cardCounter }) {
   return (
-    <Fragment>
+    <>
       <div className="top rank">{card.card}</div>
       <div
         className={`bigsuit ${
@@ -11,6 +11,6 @@ export default function Card({ card, index, cardCounter }) {
         dangerouslySetInnerHTML={{ __html: `${card.symbol}` }}
       ></div>
       <div className="bottom rank">{card.card}</div>
-    </Fragment>
+    </>
   );
 }
