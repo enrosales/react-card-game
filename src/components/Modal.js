@@ -1,38 +1,35 @@
 import React from "react";
 import ReactDOM from "react-dom";
 
-export default function Modal({winner}) {
+export default function Modal({ winner, onReset }) {
   return ReactDOM.createPortal(
-      <div className="modal" tabIndex="-1" role="dialog">
-        <div className="modal-dialog" role="document">
-          <div className="modal-content">
-            <div className="modal-header">
-              <h5 className="modal-title">Game over...</h5>
-              <button
-                type="button"
-                className="close"
-                data-dismiss="modal"
-                aria-label="Close"
-              >
-                <span aria-hidden="true">&times;</span>
-              </button>
-            </div>
-            <div className="modal-body">
-              <p>The game is over...</p>
-              <p>The winner is {winner}</p>
-            </div>
-            <div className="modal-footer">
-              <button
-                type="button"
-                className="btn btn-primary"
-                data-dismiss="modal"
-              >
-                Close
-              </button>
-            </div>
+    <div className="row">
+      <div
+        className="col-md-6 offset-md-3"
+        style={{ border: "1px solid black", marginTop: "10%" }}
+      >
+        <div className="modal-title">
+          <div className="title">
+            <h2>Game over...</h2>
           </div>
+          <button
+            style={{ border: "none", background: "none" }}
+            onClick={onReset}
+          >
+            x
+          </button>
         </div>
-      </div>,
+        <hr />
+        <div className="modal-body">
+          <h3>Winner is: {winner} </h3>
+        </div>
+        <div className="modal-footer">
+          <button className="btn btn-primary" onClick={onReset}>
+            Start new game
+          </button>
+        </div>
+      </div>
+    </div>,
     document.getElementById("modal-root")
   );
 }

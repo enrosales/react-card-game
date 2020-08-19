@@ -4,19 +4,19 @@ import { cardsShuffled, shuffle, generateCardsDeck } from "./cardsGenerator";
 
 const cards = [{ card: "card1" }, { card: "card2" }, { card: "card3" }];
 
-test("cardsShuffled function to be defined", () => {
+test("cardsShuffled must be defined", () => {
   expect(cardsShuffled).toBeDefined();
 });
 
-test("cardsShuffled to be a function", () => {
+test("cardsShuffled must be a function", () => {
   expect(typeof cardsShuffled).toEqual("function");
 });
 
-test("suffle function to be defined", () => {
+test("suffle must be defined", () => {
   expect(shuffle).toBeDefined();
 });
 
-test("shuffle to be a function", () => {
+test("shuffle must be a function", () => {
   expect(typeof shuffle).toEqual("function");
 });
 
@@ -40,7 +40,7 @@ test("shuffle return an array of the same length as the array passed", () => {
     expect(result.length).toBe(cards.length);
 });
 
-test("generateCardsDeck must be defined", () => {
+test("generateCardsDeck method must be defined", () => {
     expect(generateCardsDeck).toBeDefined();
 });
 

@@ -16,7 +16,8 @@ export default function Board({ game, onPlay, onReset, onCollect }) {
   } = game;
 
   if (cardsA.length === 0 || cardsB.length === 0) {
-    // mostrar el perdedor e iniciar juego nuevo
+    const winnerPLayer = cardsA.length === 0 ? "Player A" : "Player B";
+    return (<Modal winner={winnerPLayer} onReset={onReset} />);
   }
   return (
     <div className="board">
@@ -28,7 +29,7 @@ export default function Board({ game, onPlay, onReset, onCollect }) {
         className="row"
         style={{
           minHeight: "150px",
-          maxHeight: "150px",
+          maxHeight: "300px",
           alignItems: "center",
           justifyContent: "center"
         }}
