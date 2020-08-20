@@ -1,5 +1,8 @@
 .board {
   background: darkcyan;
+  width: 100%;
+  height: 100%;
+  position: fixed;
 }
 
 .card {
@@ -29,6 +32,17 @@
 .modal-title {
   display: flex;
   justify-content: space-between;
+}
+
+.modal-root {
+  background: linear-gradient(to top right, #667eea, #764ba2);
+  opacity: 0.90;
+  color: black;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0px;
+  left: 0px;
 }
 
 .diamonds,

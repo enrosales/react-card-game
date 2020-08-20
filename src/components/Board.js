@@ -15,7 +15,7 @@ export default function Board({ game, onPlay, onReset, onCollect }) {
     cardsOnBoardToFightPlayerB
   } = game;
 
-  if (cardsA.length === 0 || cardsB.length === 0) {
+  if (cardsA.length === 25 || cardsB.length === 25) {
     const winnerPLayer = cardsA.length === 0 ? "Player A" : "Player B";
     return (<Modal winner={winnerPLayer} onReset={onReset} />);
   }
